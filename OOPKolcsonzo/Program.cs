@@ -10,6 +10,23 @@ namespace OOPKolcsonzo
     {
         static void Main(string[] args)
         {
+            List<IKolcsonozheto> kolcsonzes = new List<IKolcsonozheto>();
+            Dvd dvd1 = new Dvd("film1", 120);
+            Dvd dvd2 = new Dvd("film2", 110);
+            Konyv k1 = new Konyv("Cim1", "szerzo1", "isbn1");
+            Konyv k2 = new Konyv("Cim2", "szerzo2", "isbn2");
+            Ujsag u1 = new Ujsag("cim1", 1999, 5);
+            Ujsag u2 = new Ujsag("cim2", 2000, 10);
+            kolcsonzes.Add(dvd1);
+            kolcsonzes.Add(dvd2);
+            kolcsonzes.Add(k1);
+            kolcsonzes.Add(k2);
+            kolcsonzes.Add(u1);
+            kolcsonzes.Add(u2);
+            foreach (var item in kolcsonzes)
+            {
+                Console.WriteLine(item.MegjelenitendoNev());
+            }
             List<Dvd> list = new List<Dvd>();
             Dvd d1 = new Dvd("film1",120);
             Dvd d2 = new Dvd("film2", 110);
